@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pavithra P — MBA Finance Student &amp; Aspiring Finance Professional</title>
+<meta name="description" content="Portfolio of Pavithra P, an MBA Finance student with a B.Com background, showcasing education, skills, certifications, academic projects and professional interests in finance and business.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy: #10243F;
+    --navy-deep: #0A1830;
+    --paper: #FAF7F2;
+    --wash: #EEF0EC;
+    --gold: #A9793D;
+    --gold-soft: #C9A874;
+    --teal: #33564C;
+    --line: #DBD6CB;
+    --ink: #1C2430;
+    --muted: #5B6472;
+    --radius: 14px;
+    --max: 1120px;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    font-family:'Inter', sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height:1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Fraunces', serif;
+    color: var(--navy);
+    margin:0 0 .4em;
+    line-height:1.15;
+    font-weight:600;
+  }
+  p{ margin:0 0 1em; color: var(--muted); }
+  a{ color: inherit; text-decoration:none; }
+  img{ max-width:100%; display:block; }
+  ul{ margin:0; padding:0; list-style:none; }
+  section{ padding: 96px 0; }
+  .wrap{ max-width: var(--max); margin:0 auto; padding:0 32px; }
+  .alt{ background: var(--wash); }
+
+  ::selection{ background: var(--gold-soft); color:#fff; }
+  :focus-visible{ outline: 2px solid var(--gold); outline-offset: 3px; }
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position: sticky; top:0; z-index:100;
+    background: rgba(250,247,242,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width: var(--max); margin:0 auto; padding: 18px 32px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .logo{
+    font-family:'Fraunces', serif; font-weight:600; font-size:1.35rem;
+    color: var(--navy); letter-spacing: .01em;
+  }
+  .logo span{ color: var(--gold); }
+  nav.links ul{ display:flex; gap: 30px; }
+  nav.links a{
+    font-size:.95rem; color: var(--navy); position:relative; padding: 4px 0;
+    font-weight:500;
+  }
+  nav.links a::after{
+    content:""; position:absolute; left:0; bottom:-2px; width:0; height:2px;
+    background: var(--gold); transition: width .25s ease;
+  }
+  nav.links a:hover::after, nav.links a.active::after{ width:100%; }
+  nav.links a.active{ color: var(--gold); }
+  .burger{
+    display:none; background:none; border:none; cursor:pointer;
+    width:34px; height:26px; position:relative;
+  }
+  .burger span, .burger span::before, .burger span::after{
+    content:""; position:absolute; left:0; width:100%; height:2px; background:var(--navy);
+    transition: transform .25s ease, opacity .25s ease;
+  }
+  .burger span{ top:12px; }
+  .burger span::before{ top:-9px; }
+  .burger span::after{ top:9px; }
+  .burger.open span{ background: transparent; }
+  .burger.open span::before{ transform: rotate(45deg); top:0; }
+  .burger.open span::after{ transform: rotate(-45deg); top:0; }
+
+  /* ---------- HERO ---------- */
+  .hero{ padding: 88px 0 100px; }
+  .hero .wrap{
+    display:grid; grid-template-columns: 1.15fr .85fr; gap:56px; align-items:center;
+  }
+  .eyebrow-greet{ font-size:1.05rem; color: var(--gold); font-weight:600; margin-bottom: 10px; }
+  .hero h1{ font-size: clamp(2.3rem, 4.6vw, 3.5rem); margin-bottom:.3em; }
+  .hero .role{ font-size:1.2rem; color: var(--teal); font-weight:600; margin-bottom: 22px; font-family:'Fraunces', serif;}
+  .hero p.intro{ font-size:1.05rem; max-width:46ch; }
+  .cta-row{ display:flex; gap:16px; margin-top: 28px; flex-wrap:wrap; }
+  .btn{
+    display:inline-block; padding: 14px 28px; border-radius: 999px;
+    font-weight:600; font-size:.95rem; cursor:pointer; border:1.5px solid transparent;
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+  }
+  .btn-primary{ background: var(--navy); color:#fff; }
+  .btn-primary:hover{ background: var(--navy-deep); transform: translateY(-2px); box-shadow: 0 10px 22px rgba(16,36,63,.25); }
+  .btn-outline{ border-color: var(--navy); color: var(--navy); background:transparent; }
+  .btn-outline:hover{ background: var(--navy); color:#fff; transform: translateY(-2px); }
+  .highlights{ display:flex; flex-wrap:wrap; gap:12px; margin-top: 34px; }
+  .chip{
+    font-size:.85rem; font-weight:500; color: var(--navy);
+    border:1px solid var(--line); background:#fff; padding:8px 16px; border-radius:999px;
+  }
+  .hero-photo{ position:relative; }
+  .photo-frame{
+    aspect-ratio: 4/5; border-radius: 20px 20px 20px 70px;
+    background: linear-gradient(160deg, var(--navy) 0%, var(--teal) 100%);
+    display:flex; align-items:center; justify-content:center;
+    position:relative; overflow:hidden;
+    box-shadow: 0 24px 48px rgba(10,24,48,.22);
+  }
+  .photo-frame::before{
+    content:"PP"; font-family:'Fraunces',serif; font-size:5rem; font-weight:600;
+    color: rgba(255,255,255,.16); letter-spacing:.02em;
+  }
+  .photo-frame .ring{
+    position:absolute; inset:14px; border:1.5px solid rgba(255,255,255,.35); border-radius: 16px 16px 16px 58px;
+  }
+  .photo-caption{ text-align:center; margin-top:16px; font-size:.85rem; color: var(--muted); }
+
+  /* ---------- SECTION HEADS ---------- */
+  .section-head{ max-width: 640px; margin-bottom: 52px; }
+  .kicker{ color: var(--gold); font-weight:600; font-size:.95rem; margin-bottom:8px; font-family:'Fraunces', serif; font-style:italic;}
+  .section-head h2{ font-size: clamp(1.8rem, 3.2vw, 2.4rem); }
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{ display:grid; grid-template-columns: 1.2fr .8fr; gap: 56px; align-items:start; }
+  .about-grid .objective{
+    border-left: 3px solid var(--gold); padding-left: 20px; margin-top: 24px; font-style: italic; color: var(--navy);
+  }
+  .snapshot{
+    background:#fff; border:1px solid var(--line); border-radius: var(--radius); padding: 30px;
+  }
+  .snapshot h3{ font-size:1.1rem; margin-bottom:16px; }
+  .snapshot li{
+    display:flex; align-items:center; gap:10px; padding:9px 0; border-top:1px solid var(--line); color: var(--navy); font-size:.95rem; font-weight:500;
+  }
+  .snapshot li:first-of-type{ border-top:none; }
+  .dot{ width:6px; height:6px; border-radius:50%; background: var(--gold); flex-shrink:0; }
+
+  /* ---------- TIMELINE ---------- */
+  .timeline{ position:relative; }
+  .timeline::before{
+    content:""; position:absolute; left:20px; top:6px; bottom:6px; width:1.5px; background: var(--line);
+  }
+  .t-item{ position:relative; padding-left: 62px; margin-bottom:40px; }
+  .t-item:last-child{ margin-bottom:0; }
+  .t-dot{
+    position:absolute; left:11px; top:2px; width:20px; height:20px; border-radius:50%;
+    background: var(--paper); border:2.5px solid var(--gold);
+  }
+  .t-card{
+    background:#fff; border:1px solid var(--line); border-radius: var(--radius); padding: 24px 28px;
+    display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;
+  }
+  .t-card h3{ font-size:1.15rem; margin-bottom:4px;}
+  .t-card .school{ color: var(--teal); font-weight:600; font-size:.92rem; margin-bottom:2px;}
+  .t-card .univ{ color: var(--muted); font-size:.88rem; }
+  .t-meta{ text-align:right; white-space:nowrap; }
+  .t-meta .status{
+    display:inline-block; margin-top:6px; font-size:.78rem; font-weight:600; color: var(--gold);
+    border:1px solid var(--gold-soft); padding:3px 12px; border-radius:999px;
+  }
+  .t-meta .score{ font-family:'Fraunces', serif; font-weight:600; color: var(--navy); font-size:1.1rem; }
+
+  /* ---------- SKILLS ---------- */
+  .skills-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 34px; }
+  .skill-cat h3{
+    font-size:1.05rem; margin-bottom:18px; padding-bottom:12px; border-bottom:1px solid var(--line);
+  }
+  .tag-list{ display:flex; flex-wrap:wrap; gap:10px; }
+  .tag{
+    background:#fff; border:1px solid var(--line); border-radius:10px; padding:10px 16px;
+    font-size:.9rem; font-weight:500; color: var(--navy); transition: border-color .2s ease, transform .2s ease;
+  }
+  .tag:hover{ border-color: var(--gold); transform: translateY(-2px); }
+
+  /* ---------- CARD GRID (generic) ---------- */
+  .card-grid{ display:grid; gap: 26px; }
+  .cols-2{ grid-template-columns: repeat(2, 1fr); }
+  .cols-3{ grid-template-columns: repeat(3, 1fr); }
+
+  .plain-card{
+    background:#fff; border:1px solid var(--line); border-radius: var(--radius); padding: 30px;
+    transition: box-shadow .25s ease, transform .25s ease;
+  }
+  .plain-card:hover{ box-shadow: 0 16px 32px rgba(16,36,63,.10); transform: translateY(-3px); }
+
+  .icon-badge{
+    width:44px; height:44px; border-radius:12px; background: var(--wash);
+    display:flex; align-items:center; justify-content:center; margin-bottom:18px;
+    color: var(--teal);
+  }
+  .icon-badge svg{ width:22px; height:22px; }
+
+  .exp-card h3{ font-size:1.1rem; }
+  .exp-tag{
+    display:inline-block; font-size:.75rem; font-weight:600; color: var(--gold); text-transform:uppercase; letter-spacing:.06em;
+    margin-bottom:10px;
+  }
+  .exp-note{
+    margin-top: 30px; padding:18px 22px; background: var(--wash); border-radius: var(--radius);
+    font-size:.9rem; color: var(--navy); font-style:italic; border-left:3px solid var(--gold);
+  }
+
+  /* ---------- PROJECTS ---------- */
+  .proj-card{ position:relative; }
+  .proj-cat{ font-size:.78rem; font-weight:600; color: var(--teal); margin-bottom:8px; }
+  .proj-card h3{ font-size:1.08rem; margin-bottom:10px; }
+  .proj-badge{
+    position:absolute; top:24px; right:24px; font-size:.68rem; font-weight:600;
+    color:#fff; background: var(--navy); padding:4px 10px; border-radius:6px; letter-spacing:.02em;
+  }
+
+  /* ---------- INTERESTS ---------- */
+  .interest-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; }
+  .interest-item{
+    display:flex; align-items:center; gap:14px; background:#fff; border:1px solid var(--line);
+    border-radius: var(--radius); padding: 18px 20px; font-weight:500; color: var(--navy);
+  }
+  .interest-item .icon-badge{ margin:0; width:38px; height:38px; }
+
+  /* ---------- STRENGTHS ---------- */
+  .strength-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:30px 34px; }
+  .strength{ display:flex; gap:16px; }
+  .strength .num{
+    font-family:'Fraunces', serif; font-weight:600; color: var(--gold-soft); font-size:1.8rem; line-height:1;
+  }
+  .strength h4{ font-size:1.02rem; margin-bottom:6px; }
+  .strength p{ font-size:.92rem; margin:0; }
+
+  /* ---------- RESUME BAND ---------- */
+  .resume-band{ background: var(--navy); color:#fff; text-align:center; padding: 90px 0; }
+  .resume-band h2{ color:#fff; }
+  .resume-band p{ color: rgba(255,255,255,.75); max-width:52ch; margin-left:auto; margin-right:auto; }
+  .resume-band .cta-row{ justify-content:center; margin-top: 30px; }
+  .resume-band .btn-outline{ border-color: rgba(255,255,255,.5); color:#fff; }
+  .resume-band .btn-outline:hover{ background:#fff; color: var(--navy); }
+  .resume-band .btn-primary{ background: var(--gold); }
+  .resume-band .btn-primary:hover{ background:#8f6a35; }
+
+  /* ---------- CONTACT ---------- */
+  .contact-grid{ display:grid; grid-template-columns: .8fr 1.2fr; gap: 56px; }
+  .contact-info li{ display:flex; align-items:center; gap:16px; margin-bottom:22px; }
+  .contact-info a, .contact-info span{ font-weight:500; color: var(--navy); }
+  .contact-info .label{ display:block; font-size:.78rem; color: var(--muted); font-weight:400; }
+  .form-grid{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  .form-grid .full{ grid-column: 1 / -1; }
+  label{ display:block; font-size:.85rem; font-weight:600; color: var(--navy); margin-bottom:6px; }
+  input, textarea{
+    width:100%; padding: 13px 16px; border-radius:10px; border:1px solid var(--line);
+    font-family:'Inter', sans-serif; font-size:.95rem; background:#fff; color: var(--ink);
+  }
+  input:focus, textarea:focus{ border-color: var(--gold); outline:none; }
+  textarea{ resize: vertical; min-height:120px; }
+  .form-note{ font-size:.85rem; margin-top:14px; color: var(--muted); }
+  .form-success{ display:none; margin-top:16px; padding:14px 18px; background: var(--wash); border-left:3px solid var(--teal); border-radius:8px; font-size:.9rem; color:var(--navy); }
+
+  /* ---------- FOOTER ---------- */
+  footer{ background: var(--navy-deep); color: rgba(255,255,255,.65); padding: 46px 0 30px; }
+  footer .wrap{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px; }
+  footer .f-name{ font-family:'Fraunces', serif; color:#fff; font-size:1.15rem; font-weight:600; }
+  footer .f-role{ font-size:.85rem; }
+  footer .f-icons{ display:flex; gap:14px; }
+  footer .f-icons a{
+    width:38px; height:38px; border:1px solid rgba(255,255,255,.2); border-radius:50%;
+    display:flex; align-items:center; justify-content:center; transition: background .2s ease;
+  }
+  footer .f-icons a:hover{ background: rgba(255,255,255,.12); }
+  footer .f-icons svg{ width:16px; height:16px; }
+  footer .copyright{ text-align:center; margin-top:30px; font-size:.8rem; border-top:1px solid rgba(255,255,255,.1); padding-top:22px; }
+
+  /* ---------- BACK TO TOP ---------- */
+  #toTop{
+    position:fixed; right:24px; bottom:24px; width:46px; height:46px; border-radius:50%;
+    background: var(--navy); color:#fff; border:none; cursor:pointer; display:flex; align-items:center;
+    justify-content:center; opacity:0; pointer-events:none; transition: opacity .3s ease, transform .3s ease;
+    z-index: 90;
+  }
+  #toTop.show{ opacity:1; pointer-events:auto; }
+  #toTop:hover{ transform: translateY(-3px); }
+
+  /* ---------- REVEAL ---------- */
+  .reveal{ opacity:0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in{ opacity:1; transform:none; }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    .reveal{ opacity:1; transform:none; transition:none; }
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 980px){
+    .hero .wrap{ grid-template-columns:1fr; }
+    .hero-photo{ order:-1; max-width:320px; margin:0 auto 20px; }
+    .about-grid{ grid-template-columns:1fr; }
+    .skills-grid{ grid-template-columns:1fr 1fr; }
+    .cols-3{ grid-template-columns:1fr 1fr; }
+    .interest-grid{ grid-template-columns:1fr 1fr; }
+    .strength-grid{ grid-template-columns:1fr 1fr; }
+    .contact-grid{ grid-template-columns:1fr; }
+  }
+  @media (max-width: 720px){
+    nav.links{
+      position:fixed; top:65px; left:0; right:0; background: var(--paper); border-bottom:1px solid var(--line);
+      max-height:0; overflow:hidden; transition: max-height .3s ease;
+    }
+    nav.links.open{ max-height:400px; }
+    nav.links ul{ flex-direction:column; gap:0; padding: 10px 32px 20px; }
+    nav.links a{ display:block; padding:12px 0; border-bottom:1px solid var(--line); }
+    .burger{ display:block; }
+    .cols-2, .cols-3, .skills-grid, .interest-grid, .strength-grid{ grid-template-columns:1fr; }
+    .form-grid{ grid-template-columns:1fr; }
+    section{ padding:66px 0; }
+    .t-card{ flex-direction:column; }
+    .t-meta{ text-align:left; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#home" class="logo">Pavithra<span>.</span></a>
+    <nav class="links" id="navLinks">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-text reveal">
+      <div class="eyebrow-greet">Hi, I'm Pavithra P</div>
+      <h1>MBA Finance Student &amp; Aspiring Finance Professional</h1>
+      <p class="intro">Motivated and enthusiastic MBA Finance student with a B.Com background, strong interest in finance and business, and practical exposure to accounting, office productivity tools and professional skills.</p>
+      <div class="cta-row">
+        <a href="#resume" class="btn btn-primary">View My Resume</a>
+        <a href="#contact" class="btn btn-outline">Let's Connect</a>
+      </div>
+      <div class="highlights">
+        <span class="chip">MBA (Finance)</span>
+        <span class="chip">B.Com Graduate</span>
+        <span class="chip">Finance &amp; Accounting</span>
+        <span class="chip">Business &amp; Employability Skills</span>
+      </div>
+    </div>
+    <div class="hero-photo reveal">
+      <div class="photo-frame"><div class="ring"></div></div>
+      <div class="photo-caption">Photo placeholder — add a professional headshot</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker">About</div>
+      <h2>A little about my journey</h2>
+    </div>
+    <div class="about-grid">
+      <div class="reveal">
+        <p>I am a motivated and enthusiastic MBA Finance student with a B.Com General background. I am interested in finance, accounting, business management and continuous professional development. I enjoy learning new skills, working with people, organizing activities and applying my academic knowledge to practical business situations.</p>
+        <div class="objective">
+          <strong>Career objective:</strong> Seeking an entry-level opportunity where I can apply my academic knowledge, technical skills and problem-solving abilities while contributing effectively to organizational growth and continuously developing my professional skills.
+        </div>
+      </div>
+      <div class="snapshot reveal">
+        <h3>Professional Snapshot</h3>
+        <ul>
+          <li><span class="dot"></span>Finance Student</li>
+          <li><span class="dot"></span>Accounting Knowledge</li>
+          <li><span class="dot"></span>MS Office Skills</li>
+          <li><span class="dot"></span>Adaptability</li>
+          <li><span class="dot"></span>Time Management</li>
+          <li><span class="dot"></span>Event Organization</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker">Education</div>
+      <h2>Academic background</h2>
+    </div>
+    <div class="timeline reveal">
+      <div class="t-item">
+        <div class="t-dot"></div>
+        <div class="t-card">
+          <div>
+            <h3>MBA (Finance)</h3>
+            <div class="school">Shrimati Indira Gandhi College, Trichy</div>
+            <div class="univ">Bharathidasan University</div>
+          </div>
+          <div class="t-meta">
+            <div class="score">GPA 74%</div>
+            <span class="status">Pursuing</span>
+          </div>
+        </div>
+      </div>
+      <div class="t-item">
+        <div class="t-dot"></div>
+        <div class="t-card">
+          <div>
+            <h3>B.Com General</h3>
+            <div class="school">Sri Sarada Mahavidyalayam Arts and Science College for Women</div>
+            <div class="univ">Annamalai University · 2022 – 2025</div>
+          </div>
+          <div class="t-meta"><div class="score">74%</div></div>
+        </div>
+      </div>
+      <div class="t-item">
+        <div class="t-dot"></div>
+        <div class="t-card">
+          <div>
+            <h3>HSC</h3>
+            <div class="school">NLC Girls Higher Secondary School</div>
+            <div class="univ">May 2022</div>
+          </div>
+          <div class="t-meta"><div class="score">42%</div></div>
+        </div>
+      </div>
+      <div class="t-item">
+        <div class="t-dot"></div>
+        <div class="t-card">
+          <div>
+            <h3>SSLC</h3>
+            <div class="school">NLC Girls Higher Secondary School</div>
+            <div class="univ">May 2020</div>
+          </div>
+          <div class="t-meta"><div class="score">51%</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker">Skills</div>
+      <h2>What I work with</h2>
+    </div>
+    <div class="skills-grid reveal">
+      <div class="skill-cat">
+        <h3>Technical</h3>
+        <div class="tag-list">
+          <span class="tag">MS Excel</span>
+          <span class="tag">MS Word</span>
+          <span class="tag">PowerPoint</span>
+          <span class="tag">Google Workspace</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <h3>Domain</h3>
+        <div class="tag-list">
+          <span class="tag">Tally ERP 9</span>
+          <span class="tag">Financial Accounting</span>
+          <span class="tag">Entrepreneur Development Program</span>
+          <span class="tag">Content Writing</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <h3>Professional Competencies</h3>
+        <div class="tag-list">
+          <span class="tag">Adaptability &amp; Learning Agility</span>
+          <span class="tag">Time &amp; Priority Management</span>
+          <span class="tag">Communication</span>
+          <span class="tag">Teamwork</span>
+          <span class="tag">Event Organization</span>
+          <span class="tag">Continuous Learning</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker">Experience</div>
+      <h2>Internship exposure</h2>
+    </div>
+    <div class="card-grid cols-2 reveal">
+      <div class="plain-card exp-card">
+        <div class="icon-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-7h6v7"/></svg>
+        </div>
+        <span class="exp-tag">Internship · Exposure</span>
+        <h3>Sethuraman Prabu &amp; Associates</h3>
+        <p>Practical exposure to a professional working environment.</p>
+        <p>Opportunity to understand workplace processes and apply academic knowledge.</p>
+      </div>
+      <div class="plain-card exp-card">
+        <div class="icon-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-7h6v7"/></svg>
+        </div>
+        <span class="exp-tag">Internship · Exposure</span>
+        <h3>Ison Xperiences India Limited</h3>
+        <p>Practical exposure to a professional working environment.</p>
+        <p>Opportunity to understand workplace processes and apply academic knowledge.</p>
+      </div>
+    </div>
+    <div class="exp-note reveal">Detailed internship responsibilities can be added as my experience develops.</div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker">Certifications</div>
+      <h2>Naan Mudhalvan · 2022 – 2025</h2>
+    </div>
+    <div class="card-grid cols-3 reveal">
+      <div class="plain-card">
+        <div class="icon-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="5"/><path d="M8.5 13 7 22l5-3 5 3-1.5-9"/></svg>
+        </div>
+        <h3>Employability Skills</h3>
+        <p>Foundational training in workplace readiness and professional conduct.</p>
+      </div>
+      <div class="plain-card">
+        <div class="icon-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg>
+        </div>
+        <h3>Oracle Supply Chain Management</h3>
+        <p>Introductory exposure to supply chain concepts and Oracle applications.</p>
+      </div>
+      <div class="plain-card">
+        <div class="icon-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <h3>Microsoft Office Essentials</h3>
+        <p>Practical proficiency across core Microsoft Office applications.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements" class="alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker">Achievements &amp; Leadership</div>
+      <h2>Beyond the classroom</h2>
+    </div>
+    <div class="card-grid cols-3 reveal">
+      <div class="plain-card">
+        <div class="icon-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>NSS Volunteer</h3>
+        <p>Participation in social and community-oriented activities.</p>
+      </div>
+      <div class="plain-card">
+        <div class="icon-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        </div>
+        <h3>Cultural Activities</h3>
+        <p>Active involvement in cultural activities.</p>
+      </div>
+      <div class="plain-card">
+        <div class="icon-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>
+        </div>
+        <h3>Event Organization</h3>
+        <p>Experience participating in organizing and coordinating events.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker">Projects &amp; Academic Work</div>
+      <h2>Coursework I've explored</h2>
+    </div>
+    <div class="card-grid cols-3 reveal">
+      <div class="plain-card proj-card">
+        <span class="proj-badge">Academic Project</span>
+        <div class="proj-cat">Financial Services</div>
+        <h3>Issues in Pricing Models</h3>
+        <p>Examined the challenges involved in pricing financial services and products.</p>
+      </div>
+      <div class="plain-card proj-card">
+        <span class="proj-badge">Academic Project</span>
+        <div class="proj-cat">Financial Markets</div>
+        <h3>Impact of AI on the Future of NSE and BSE</h3>
+        <p>Explored how artificial intelligence may shape India's leading stock exchanges.</p>
+      </div>
+      <div class="plain-card proj-card">
+        <span class="proj-badge">Academic Project</span>
+        <div class="proj-cat">Strategic Management</div>
+        <h3>Porter's Five Forces Industry Analysis</h3>
+        <p>Applied Porter's framework to analyse competitive forces within an industry.</p>
+      </div>
+      <div class="plain-card proj-card">
+        <span class="proj-badge">Academic Project</span>
+        <div class="proj-cat">Research Methods</div>
+        <h3>Management Problem &amp; Solution Research</h3>
+        <p>Studied structured approaches to identifying and solving management problems.</p>
+      </div>
+      <div class="plain-card proj-card">
+        <span class="proj-badge">Academic Project</span>
+        <div class="proj-cat">Business Combinations</div>
+        <h3>Mergers, Amalgamations, Acquisitions &amp; Takeovers</h3>
+        <p>Studied the concepts, distinctions and implications of business combinations.</p>
+      </div>
+      <div class="plain-card proj-card">
+        <span class="proj-badge">Academic Project</span>
+        <div class="proj-cat">ESG</div>
+        <h3>ESG Reporting</h3>
+        <p>Looked at environmental and social considerations within ESG reporting frameworks.</p>
+      </div>
+      <div class="plain-card proj-card">
+        <span class="proj-badge">Academic Project</span>
+        <div class="proj-cat">Finance &amp; Investment</div>
+        <h3>Bond &amp; Equity Valuation</h3>
+        <p>Covered bond valuation, yield to maturity, the Gordon Growth Model, equity valuation, and economic &amp; industry analysis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROFESSIONAL INTERESTS -->
+<section class="alt" id="interests">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker">Professional Interests</div>
+      <h2>Where my curiosity lies</h2>
+    </div>
+    <div class="interest-grid reveal">
+      <div class="interest-item"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>Finance</div>
+      <div class="interest-item"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>Financial Services</div>
+      <div class="interest-item"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 14l3-3 3 2 4-5"/></svg></div>Accounting</div>
+      <div class="interest-item"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>Investment Analysis</div>
+      <div class="interest-item"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M6 21V10l6-6 6 6v11"/></svg></div>Business Management</div>
+      <div class="interest-item"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7v6h-6"/></svg></div>Financial Markets</div>
+      <div class="interest-item"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>Research</div>
+      <div class="interest-item"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 2 3 14h7l-1 8 11-14h-7l1-6z"/></svg></div>Entrepreneurship</div>
+      <div class="interest-item"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>Digital Business Tools</div>
+    </div>
+  </div>
+</section>
+
+<!-- STRENGTHS -->
+<section id="strengths">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker">What I Bring</div>
+      <h2>Personal strengths</h2>
+    </div>
+    <div class="strength-grid reveal">
+      <div class="strength"><div class="num">01</div><div><h4>Adaptability</h4><p>Quick to learn and adapt to new environments.</p></div></div>
+      <div class="strength"><div class="num">02</div><div><h4>Learning Agility</h4><p>Interested in continuously developing academic and professional skills.</p></div></div>
+      <div class="strength"><div class="num">03</div><div><h4>Time Management</h4><p>Aware of the importance of managing priorities effectively.</p></div></div>
+      <div class="strength"><div class="num">04</div><div><h4>Teamwork</h4><p>Comfortable participating in group activities and events.</p></div></div>
+      <div class="strength"><div class="num">05</div><div><h4>Event Organization</h4><p>Interested in planning and coordinating activities.</p></div></div>
+      <div class="strength"><div class="num">06</div><div><h4>Professional Growth</h4><p>Focused on building a strong career in finance and business.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section class="resume-band" id="resume">
+  <div class="wrap reveal">
+    <h2>Want to know more about me?</h2>
+    <p>Download my resume to explore my education, skills, certifications and experience.</p>
+    <div class="cta-row">
+      <a href="#" class="btn btn-primary" id="downloadResumeBtn">Download Resume</a>
+      <a href="#" class="btn btn-outline" id="viewResumeBtn" target="_blank" rel="noopener">View Resume</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker">Contact</div>
+      <h2>Let's get in touch</h2>
+    </div>
+    <div class="contact-grid reveal">
+      <div class="contact-info">
+        <ul>
+          <li>
+            <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
+            <div><span class="label">Email</span><a href="mailto:pavithrap0608@gmail.com">pavithrap0608@gmail.com</a></div>
+          </li>
+          <li>
+            <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div><span class="label">Phone</span><a href="tel:+918072204982">+91 80722 04982</a></div>
+          </li>
+          <li>
+            <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><span class="label">Location</span><span>Neyveli, Tamil Nadu</span></div>
+          </li>
+          <li>
+            <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/><path d="M10 9v12M10 13a4 4 0 0 1 8 0v8"/></svg></div>
+            <div><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/pavithra-p37b0273b5/" target="_blank" rel="noopener">/in/pavithra-p37b0273b5</a></div>
+          </li>
+        </ul>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <div class="form-grid">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="full">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+          <div class="full">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <div class="full">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p class="form-note">This form is a front-end demo — connect it to an email service (like Formspree) or a backend to start receiving messages.</p>
+            <div class="form-success" id="formSuccess">Thanks for reaching out — your message is ready to send once this form is connected to a backend.</div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="f-name">Pavithra P</div>
+      <div class="f-role">MBA Finance Student | Aspiring Finance Professional</div>
+    </div>
+    <div class="f-icons">
+      <a href="https://www.linkedin.com/in/pavithra-p37b0273b5/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/><path d="M10 9v12M10 13a4 4 0 0 1 8 0v8"/></svg></a>
+      <a href="mailto:pavithrap0608@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+    </div>
+  </div>
+  <div class="copyright wrap">© 2026 Pavithra P. All Rights Reserved.</div>
+</footer>
+
+<button id="toTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script>
+  // Mobile nav toggle
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    burger.classList.toggle('open', isOpen);
+    burger.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    burger.classList.remove('open');
+    burger.setAttribute('aria-expanded', false);
+  }));
+
+  // Active link highlighting
+  const sections = document.querySelectorAll('section[id]');
+  const navA = document.querySelectorAll('nav.links a');
+  const setActive = () => {
+    let current = sections[0].id;
+    const offset = 120;
+    sections.forEach(sec => {
+      if (window.scrollY >= sec.offsetTop - offset) current = sec.id;
+    });
+    navA.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+  };
+  window.addEventListener('scroll', setActive);
+  setActive();
+
+  // Back to top
+  const toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', () => {
+    toTop.classList.toggle('show', window.scrollY > 500);
+  });
+  toTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+
+  // Resume buttons — no file uploaded yet, so surface a clear, honest note
+  ['downloadResumeBtn','viewResumeBtn'].forEach(id => {
+    document.getElementById(id).addEventListener('click', (e) => {
+      e.preventDefault();
+      alert('Add your resume PDF (e.g. resume.pdf) and update this button\'s link to enable this action.');
+    });
+  });
+
+  // Contact form — front-end only
+  document.getElementById('contactForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    document.getElementById('formSuccess').style.display = 'block';
+    e.target.reset();
+  });
+</script>
+
+</body>
+</html>
